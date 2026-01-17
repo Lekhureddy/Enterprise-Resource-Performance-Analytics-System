@@ -23,6 +23,60 @@ The dataset represents **ERP project transaction data** analyzed outside the ERP
 
 ## End-to-End Data Flow
 
+ERP Project Data (Simulated)
+        ↓
+Raw ERP Transactions (projects.csv)
+        ↓
+Data Cleaning & Validation
+        ↓
+Processed ERP Dataset
+        ↓
+Analytics & KPIs
+        ↓
+Machine Learning Risk Prediction
+        ↓
+Management Dashboard (Power BI)
+
+
+## ERP System Architecture (Conceptual)
+
+SAP ERP Modules (Simulated)
+├── PS (Project System)
+│   ├── Project timelines
+│   ├── Milestones
+│   └── Delivery status
+│
+├── CO (Controlling)
+│   ├── Budget allocation
+│   ├── Cost consumption
+│   └── Budget variance
+│
+├── HCM / SuccessFactors
+│   ├── Team size
+│   ├── Team experience
+│   └── Resource availability
+│
+├── Risk Management
+│   ├── Risk level
+│   └── Issue tracking
+│
+└── ERP Data Extract (CSV)
+        ↓
+Data Cleaning & Validation (Python)
+        ↓
+ERP Analytics Layer
+├── KPIs & Trends
+├── Resource Utilization Analysis
+├── Cost & Schedule Analysis
+        ↓
+Machine Learning Layer
+├── Delay Prediction Model
+├── Risk Classification
+        ↓
+Visualization & Reporting
+└── Power BI Executive Dashboard
+
+
 
 ---
 
