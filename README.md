@@ -1,72 +1,138 @@
-# Enterprise Resource Performance Analytics System
+# Enterprise Resource Performance Analytics System (ERP-Integrated)
 
 ## Project Overview
-This project simulates a real-world enterprise project analytics system that analyzes
-resource utilization, cost efficiency, and project outcomes using data analytics and
-machine learning.
+This project implements an **ERP-integrated project performance analytics and decision support system** inspired by **SAP ERP project management workflows**.  
+The goal is to analyze **resource utilization, cost efficiency, schedule adherence, and delivery risk** using data analytics and interpretable machine learning.
 
-The goal is to predict whether a project will be **Delayed** or **On-time** based on
-resource, budget, and team-related factors.
+The solution is designed for **engineering managers, project managers, and PMO teams** to support **data-driven decision-making** across enterprise projects.
 
 ---
 
-## Dataset
-- Synthetic, industry-inspired dataset
-- 420 enterprise projects
-- Includes missing values to reflect real-world uncertainty
+## ERP / SAP Business Context
+In real-world enterprises, project-related data is stored across multiple ERP modules.  
+This project simulates data extracted from SAP-style ERP systems, including:
 
-### Key Features
-- Team Size
-- Team Experience
-- Budget Usage %
-- Resource Cost
-- Utilization %
-- Issues Reported
-- Risk Level
+- SAP PS (Project System)** – project timelines, milestones, delivery status  
+- SAP CO (Controlling)** – budget allocation, cost usage  
+- SAP HCM / SuccessFactors** – team size and experience  
+- SAP Risk Management** – project risk classification  
 
-Target Variable:
-- **Outcome** (Delayed / On-time)
+The dataset represents **ERP project transaction data** analyzed outside the ERP system for advanced analytics and forecasting.
 
 ---
 
-## Data Processing
-- Missing values handled using median (numerical) and most-frequent (categorical)
-- Categorical features encoded using One-Hot Encoding
-- Feature scaling applied where required
-- Train-test split: 80% / 20%
+## End-to-End Data Flow
+
 
 ---
 
-## Machine Learning Model
-- Model: Logistic Regression
-- Pipeline used for preprocessing + modeling
-- Evaluation Metrics:
+## Dataset Description
+- **Type:** Synthetic, industry-inspired ERP dataset  
+- **Records:** 420 enterprise projects  
+- **Domain:** Engineering & Project Management  
+
+### Key Attributes
+- Team Size & Experience  
+- Estimated vs Actual Effort  
+- Budget Usage & Resource Cost  
+- Utilization Percentage  
+- Issues Reported  
+- Risk Level  
+- Project Outcome (On-time / Delayed)  
+
+The dataset intentionally includes **missing values** to reflect real ERP data quality challenges.
+
+---
+
+## Data Preparation & Feature Engineering
+Key preprocessing steps:
+- Handling missing numeric values using **median imputation**
+- Handling missing categorical values using **most-frequent imputation**
+- Encoding ERP categorical attributes (Project Type, Risk Level)
+- Preparing analytics-ready and ML-ready datasets
+
+Generated outputs:
+- `projects_clean.csv`
+- `projects_model_ready.csv`
+
+---
+
+## Exploratory Data Analysis & KPIs
+Management-level KPIs derived from ERP data:
+- On-Time Delivery Rate
+- Budget Overrun Distribution
+- Resource Utilization Trends
+- Issue Frequency vs Project Delays
+- Risk Level Impact on Delivery Outcomes
+
+These KPIs help identify **early warning signals** during project execution.
+
+---
+
+## Analytics & Machine Learning Implementation
+
+### Analytics
+- Exploratory Data Analysis (EDA) performed using Python (Pandas, Seaborn, Matplotlib)
+- Identified relationships between:
+  - Budget usage and delays
+  - Resource utilization and delivery risk
+  - Issue escalation and project outcomes
+- Results visualized using **Power BI dashboards** for management consumption.
+
+### Machine Learning
+- **Model Used:** Logistic Regression  
+- **Objective:** Predict project delivery outcome (**Delayed / On-time**)  
+
+### Why Logistic Regression?
+- Interpretable and transparent
+- Suitable for management decision support
+- Commonly used in enterprise risk modeling
+
+### ML Pipeline
+- Missing value handling (numeric & categorical)
+- Feature encoding using One-Hot Encoding
+- Train-test split (80% / 20%)
+- Model evaluation using:
   - Accuracy
   - Precision
   - Recall
-  - F1-score
   - Confusion Matrix
+
+The ML model functions as an **ERP decision-support component**, providing early warnings for high-risk projects.
 
 ---
 
-## Results
-- Overall Accuracy: **~77%**
+## Model Performance Summary
+- **Accuracy:** ~77%
 - Strong recall for delayed projects
-- Demonstrates realistic enterprise risk prediction behavior
+- Suitable for **early-stage ERP risk prediction** and portfolio-level monitoring
+
+---
+
+## Business Value
+This system enables organizations to:
+- Detect delivery risks early
+- Improve planning and estimation accuracy
+- Optimize resource utilization
+- Reduce budget overruns
+- Strengthen ERP-driven project governance
 
 ---
 
 ## Tools & Technologies
-- Python
-- Pandas, NumPy
+- Python (Pandas, NumPy)
 - Scikit-learn
-- Matplotlib / Seaborn
-- Google Colab
+- Jupyter / Google Colab
+- Power BI (Web)
+- ERP / SAP-inspired data modeling
+- Git & GitHub
 
 ---
 
-## Business Use Case
-This system can help:
-- Project Managers identify high-risk projects early
-- Organizations optimize resource allocation
-- Leadership make data-driven delivery decisions
+## Future Enhancements
+- Integration with real SAP project exports
+- Time-series forecasting for schedule risk
+- Advanced ensemble ML models
+- Automated ERP ETL pipelines
+
+
