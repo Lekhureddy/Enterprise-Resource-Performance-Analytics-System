@@ -24,18 +24,19 @@ The dataset represents **ERP project transaction data** analyzed outside the ERP
 ## End-to-End Data Flow
 
 ERP Project Data (Simulated)
-        ↓
+↓
 Raw ERP Transactions (projects.csv)
-        ↓
+↓
 Data Cleaning & Validation
-        ↓
+↓
 Processed ERP Dataset
-        ↓
+↓
 Analytics & KPIs
-        ↓
-Machine Learning Risk Prediction
-        ↓
+↓
+Machine Learning Risk / Delay Prediction
+↓
 Management Dashboard (Power BI)
+
 
 
 ## ERP System Architecture (Conceptual)
