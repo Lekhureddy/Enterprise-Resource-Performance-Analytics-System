@@ -24,61 +24,66 @@ The dataset represents ERP project transaction data exported from an ERP system 
 ## End-to-End Data Flow
 
 ERP Project Data (Simulated)
-↓
-Raw ERP Transactions (projects.csv)
-↓
-Data Cleaning & Validation
-↓
-Processed ERP Dataset
-↓
-Analytics & KPI Generation
-↓
-Machine Learning Risk / Delay Prediction
-↓
-Management Dashboard (Power BI)
-
+→ Raw ERP Transactions (projects.csv)
+→ Data Cleaning & Validation (Python)
+→ Processed ERP Dataset
+→ Analytics & KPI Generation
+→ Machine Learning Risk / Delay Prediction
+→ Management Dashboard (Power BI)
 
 ---
 
 ## ERP System Architecture (Conceptual)
 
 SAP ERP Modules (Simulated)
-├── PS (Project System)
-│ ├── Project timelines
-│ ├── Milestones
-│ └── Delivery status
-│
-├── CO (Controlling)
-│ ├── Budget allocation
-│ ├── Cost consumption
-│ └── Budget variance
-│
-├── HCM / SuccessFactors
-│ ├── Team size
-│ ├── Team experience
-│ └── Resource availability
-│
-├── Risk Management
-│ ├── Risk level
-│ └── Issue tracking
-│
-└── ERP Data Extract (CSV)
-↓
-Data Cleaning & Validation (Python)
-↓
-ERP Analytics Layer
-├── KPIs & Performance Trends
-├── Resource Utilization Analysis
-├── Cost & Schedule Analysis
-↓
-Machine Learning Layer
-├── Delivery Delay Prediction
-├── Risk Classification
-↓
-Visualization & Reporting
-└── Power BI Executive Dashboard
 
+• PS (Project System)
 
+Project timelines
+
+Milestones
+
+Delivery status
+
+• CO (Controlling)
+
+Budget allocation
+
+Cost consumption
+
+Budget variance
+
+• HCM / SuccessFactors
+
+Team size
+
+Team experience
+
+Resource availability
+
+• Risk Management
+
+Risk level
+
+Issue tracking
+
+ERP Data Extract (CSV)
+→ Data Cleaning & Validation (Python)
+→ ERP Analytics Layer
+
+KPIs & performance trends
+
+Resource utilization analysis
+
+Cost & schedule analysis
+→ Machine Learning Layer
+
+Delivery delay prediction
+
+Risk classification
+→ Visualization & Reporting
+
+Power BI executive dashboard
 ---
 
 ## Dataset Description
